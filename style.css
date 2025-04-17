@@ -186,16 +186,3 @@ body {
 * {
   user-select: none;
 }
-@media (min-width: 769px) {
-  .carousel img {
-    width: 70px;
-    height: 70px;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-  }
-
-  .carousel img:hover {
-    transform: scale(1.05);
-  }
-}
