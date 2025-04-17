@@ -134,12 +134,10 @@ body {
 
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
-  .navbar .nav-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  .nav-links {
+    display: none;
   }
-
+}
   .hero h2 {
     font-size: 2.5rem;
   }
@@ -152,9 +150,3 @@ body {
     width: 100px;
     height: 100px;
   }
-}
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-}
