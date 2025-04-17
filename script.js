@@ -8,3 +8,19 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
       }
     });
   });  
+if (window.innerWidth <= 768) {  // Targeting mobile devices (below 768px width)
+  const video = document.querySelector('.fullscreen-video');
+  
+  video.addEventListener('ended', function () {
+    video.currentTime = 0;  // Restart video immediately
+    video.play();  // Play again
+  });
+}
+if (window.innerWidth <= 768) {  // Targeting mobile devices
+  const video = document.querySelector('.fullscreen-video');
+  
+  video.addEventListener('ended', function () {
+    video.load();  // Reload video to ensure smooth loop
+    video.play();  // Start playing immediately
+  });
+}
