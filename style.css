@@ -147,28 +147,6 @@ body {
   border-radius: 10px;
 }
 
-/* Arrows */
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.5);
-  color: white;
-  font-size: 24px;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.arrow.left {
-  left: 0;
-}
-
-.arrow.right {
-  right: 0;
-}
-
 /* Footer Styling */
 .footer {
   background-color: #333;
@@ -202,16 +180,6 @@ body {
     height: 100px;
   }
 
-  /* Hide arrows on desktop */
-  .arrow {
-    display: block;
-    font-size: 30px;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 10px;
-    border-radius: 50%;
-    z-index: 2;
-  }
 
   /* Carousel for mobile */
   .carousel-wrapper {
