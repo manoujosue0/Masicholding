@@ -3,18 +3,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none; /* Combine user-select here */
 }
 
 /* Body Styling */
 body {
-  padding-top: 60px; /* Same as navbar height */
+  padding-top: 70px; /* Matches navbar height */
 }
 
 /* Navbar Styling */
 .navbar {
   background-color: #000;
   color: #fff;
-  padding: 15px 40px; /* Increased padding for better spacing */
+  padding: 15px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,34 +23,33 @@ body {
   top: 0;
   width: 100%;
   z-index: 1000;
-  height: 70px; /* Slightly taller navbar */
+  height: 70px;
+  user-select: none;
 }
 
 .navbar .logo {
-  font-size: 1.6rem; /* Bigger logo text */
+  font-size: 1.6rem;
   font-weight: bold;
 }
 
 .navbar .nav-links li {
   display: inline-block;
-  margin-left: 20px; /* Space between links */
+  margin-left: 20px;
 }
 
-/* Navbar links default style */
 .navbar .nav-links a {
-  text-decoration: none;        /* No underline */
-  color: white;                 /* Default text color */
+  text-decoration: none;
+  color: white;
   font-size: 1.1rem;
   padding: 8px 12px;
-  transition: color 0.3s ease;  /* Smooth color change */
+  transition: color 0.3s ease;
 }
 
-/* Hover effect */
 .navbar .nav-links a:hover {
-  color: orange;                /* Only color changes */
+  color: orange;
 }
 
-/* Hero Section Styling */
+/* Hero Section */
 .hero {
   position: relative;
   height: 100vh;
@@ -64,19 +64,17 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
+  overflow: hidden;
 }
 
 .fullscreen-video {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
-}
-
-/* Hide video autoplay on mobile */
-@media (max-width: 768px) {
-  .fullscreen-video {
-    display: none; /* Hide the video */
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 /* Hero Content */
@@ -98,7 +96,7 @@ body {
   margin-top: 10px;
 }
 
-/* Companies Carousel Section */
+/* Partners Section */
 .partners {
   padding: 50px 20px;
   text-align: center;
@@ -131,21 +129,20 @@ body {
   transform: scale(1.1);
 }
 
-/* Footer Styling */
+/* Footer */
 .footer {
   background-color: #333;
   color: #fff;
   text-align: center;
   padding: 30px 20px;
-  margin-top: auto; /* Pushes footer to the bottom when content is short */
+  margin-top: auto;
 }
 
 .footer p {
   font-size: 1rem;
-  color: white;
 }
 
-/* Media Queries for Mobile Devices */
+/* ========== Responsive Styling ========== */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -164,12 +161,11 @@ body {
     height: 100px;
   }
 
-/* Desktop view */
-@media (min-width: 769px) {
-  .carousel-wrapper {
-    display: none; /* Hide mobile version */
+  .fullscreen-video {
+    display: block; /* Ensure it shows on mobile */
   }
 }
+
 @media (min-width: 769px) {
   .navbar {
     justify-content: space-between;
@@ -179,10 +175,8 @@ body {
     display: flex;
     align-items: center;
   }
-}
-.navbar {
-  user-select: none;
-}
-* {
-  user-select: none;
+
+  .carousel-wrapper {
+    display: none;
+  }
 }
