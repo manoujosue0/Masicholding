@@ -61,3 +61,18 @@ if (window.innerWidth <= 768) {
     }
   });
 }
+.fullscreen-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .fullscreen-video {
+    display: block; /* ✅ ensures it's not hidden */
+  }
+}
