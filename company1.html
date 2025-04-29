@@ -2,67 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Website</title>
-
-  <style>
-    /* Reset some default margins */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Navbar styles */
-    nav {
-      background-color: #1a1a40; /* Dark blue background */
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color: #ffcc00; /* Gold on hover */
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Company 1 - MASICHOLDING</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="company1-bg"> <!-- Unique body class for Company 1 -->
 
-  <nav>
-    <div class="logo">MySite</div>
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
+  <!-- You can also reuse your main nav if desired -->
+  <nav class="navbar">
+    <div class="logo">MASICHOLDING</div>
   </nav>
 
-  <!-- Your main page content starts here -->
-  <div style="padding: 2rem;">
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple page with a navbar at the top.</p>
-  </div>
+  <section class="company-hero">
+    <div class="company-content">
+      <h2>Company 1</h2>
+      <p>This is Company 1's description or content.</p>
+    </div>
+  </section>
 
+  <script src="script.js"></script>
 </body>
 </html>
